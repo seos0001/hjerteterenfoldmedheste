@@ -1,0 +1,41 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import { Image } from "astro:assets";
+import bog from "../assets/images/bog.webp";
+---
+
+<MainLayout>
+  <section class="min-h-screen bg-pink-200 flex flex-col items-center py-12 px-4">
+    <div class="max-w-4xl w-full">
+
+      <div class="flex justify-center mb-6">
+        <img src={bog.src} alt="Hjertet er en fold med heste" class="w-180 h-auto" />
+      </div>
+      
+      <!-- Overskrift og forfatterinfo -->
+      <p class="text-lg text-center mb-4">
+        Hjertet er en fold med heste: FORLAGET AMULET, ANNA RIEDER og SIDSEL ANA WELDEN. 
+BIDRAG FRA: Birgit Bundesen, Gry Stokkendahl Dalgas og Fine Gråbøl. 
+      </p>
+
+      <!-- Tekst i to kolonner -->
+      <div class="grid md:grid-cols-2 gap-6 mb-6">
+        <p class="leading-relaxed">
+          Hjertet er en fold med heste af Anna Rieder og Sidsel Ana Welden er en stærk og flerstemmig antologi, der med litterært nærvær og personlig indsigt tegner et råt og rørende portræt af psykiatrien i Danmark. Gennem bidrag fra patienter, pårørende og fagfolk foldes psykiatriens mange facetter ud – fra sårbarhed og omsorg til afmagt, modstand og håb om forandring. Med en blanding af essays, digte og personlige beretninger skaber bogen et rum for refleksion og vidnesbyrd, hvor stemmer, der ofte overses i den offentlige debat, får plads. Blandt bidragyderne er Birgit Bundesen, Fine Gråbøl, Jakob Jakobsen og Asta Olivia Nordenhof, der hver især bidrager med deres unikke perspektiver på psykiatriens realiteter og udfordringer.
+        </p>
+        <p class="leading-relaxed">
+          Forfatterne, der selv har erfaringer som psykiatribrugere, viderefører med denne bog deres arbejde for ømhedsaktivisme– en bevægelse, der insisterer på større forståelse, respekt og værdighed i behandlingen af psykisk sårbare. Med et skarpt blik for psykiatriens nuværende tilstand peger bogen både på systemets svigt og dets muligheder for forandring. Gennem de personlige fortællinger og litterære bidrag åbner Hjertet er en fold med heste en vigtig samtale om psykiatriens fremtid og behovet for en mere menneskelig tilgang til sårbarhed og behandling.
+        </p>
+      </div>
+
+      <!-- Afsluttende afsnit -->
+      <p class="leading-relaxed">
+        Ved at købe Hjertet er en fold med heste støtter du en nødvendig samtale om psykiatri og psykisk
+        sårbarhed. Bogen kan købes hos din lokale boghandler eller
+        <a href="#" class="font-bold underline">her</a>.
+      </p>
+    </div>
+  </section>
+</MainLayout>
+
+
