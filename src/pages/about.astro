@@ -7,42 +7,42 @@ import om_os from "../assets/images/om_os.webp";
 
 ---
 <MainLayout>
-  <!-- Lyserød sektion med streger inkluderet -->
-  <section class="relative min-h-screen bg-[#F8C1C8] flex flex-col items-center py-12 px-4 overflow-hidden">
+  <div class="w-full">
+   <div class="h-1 bg-[#FEEEBD]"></div>
+      <div class="h-2 bg-[#C2E5F2]"></div>
+      <div class="h-2 bg-[#F8C1C8]"></div>
+<section class="relative font-serif overflow-hidden h-[125vh]">
+  <!-- Billede bag teksten -->
+  <div class="absolute inset-0 z-0">
+    <img src={om_os.src} alt="Bogen" class="w-full h-90% object-cover object-center" />
+  </div>
 
-    <!-- Øverste streger -->
-    <div class="absolute top-0 left-0 w-full z-0">
-      <div class="h-1.5 bg-[#C2E5F2]"></div> <!-- Lyseblå -->
-      <div class="h-1.5 bg-[#F8C1C8]"></div> <!-- Lyserød -->
-      <div class="h-2.5 bg-[#FEEEBD]"></div> <!-- Gul -->
+  <!-- Tekstblok der skal parallax-scrolles op over billedet -->
+  <div class="parallaxelement relative z-10 max-w-5xl mx-auto mt-110 px-6 pt-[5rem] pb-[5rem] text-black grid md:grid-cols-2 gap-10 bg-[#FEEEBD] opacity-80 border-2 border-b-gray-700 rounded-xl shadow-lg backdrop-blur-sm">
+    <div>
+      <h2 class="text-base text-gray-700 italic mb-4">
+        At belyse det usete – en platform for psykiatriens virkelighed
+      </h2>
+      <p class="leading-tight text-justify">
+        Dette site synliggør den kritiske mangel på ressourcer i psykiatrien og de konsekvenser, det har for patienter, pårørende og fagpersoner. Gennem personlige fortællinger og erfaringsdeling ønsker vi at skabe et rum, hvor sårbarhed og systemsvigt træder frem – ikke for at skabe håbløshed, men for at inspirere til forståelse og forandring. Vi arbejder for at give stemme til dem, der ofte ikke bliver hørt, og for at nuancere samtalen om psykiatrien.
+      </p>
     </div>
 
-    <!-- Indhold -->
-	 
-    <div class="max-w-2xl w-full relative z-10 mt-6">
-		 <div class="flex justify-center mb-6">
-        <img src={om_os.src} alt="Hjertet er en fold med heste" class="w-180 h-auto" />
-      </div>
-      
-      <div class="grid md:grid-cols-2 gap-12 mb-10">
-
-		 <h1 class="text-base text-gray-700 mt-2 italic">At belyse det usete – en platform for psykiatriens virkelighed</h1>
-        <p class="leading-tight text-justify">
-          Dette site synliggør den kritiske mangel på ressourcer i psykiatrien og de konsekvenser, det har for patienter, pårørende og fagpersoner. Gennem personlige fortællinger og erfaringsdeling ønsker vi at skabe et rum, hvor sårbarhed og systemsvigt træder frem – ikke for at skabe håbløshed, men for at inspirere til forståelse og forandring. Vi arbejder for at give stemme til dem, der ofte ikke bliver hørt, og for at nuancere samtalen om psykiatrien.
-        </p>
-        <p class="leading-tight text-justify">
-         Bliv en del af fortællingen – og vær med til at skabe en mere menneskelig psykiatri. Du kan også støtte arbejdet ved at købe bogen Hjertet er en fold med heste [her], en stærk og flerstemmig antologi af Anna Rieder og Sidsel Ana Welden, udgivet på Forlaget Amulet. Bogen giver et råt og rørende indblik i psykiatrien gennem essays, digte og personlige beretninger fra patienter, pårørende og fagfolk. Ved at købe bogen støtter du en nødvendig samtale om psykiatri og psykisk sårbarhed.
-Du kan også give et bidrag ved at udfylde [formularen]. Dit bidrag går direkte til Psykiatrifonden, der arbejder for bedre vilkår for psykisk sårbare og deres pårørende.
-
-  <p class="text-base text-gray-700 mt-2 italic">Tak for din støtte – sammen kan vi skabe forandring.</p>
-        </p>
-      </div>
+    <div>
+      <p class="leading-tight text-justify">
+        Bliv en del af fortællingen – og vær med til at skabe en mere menneskelig psykiatri. Du kan også støtte arbejdet ved at købe bogen <em>Hjertet er en fold med heste</em> [her], en stærk og flerstemmig antologi af Anna Rieder og Sidsel Ana Welden, udgivet på Forlaget Amulet. Bogen giver et råt og rørende indblik i psykiatrien gennem essays, digte og personlige beretninger fra patienter, pårørende og fagfolk. Ved at købe bogen støtter du en nødvendig samtale om psykiatri og psykisk sårbarhed.
+        <br /><br />
+        Du kan også give et bidrag ved at udfylde [formularen]. Dit bidrag går direkte til Psykiatrifonden, der arbejder for bedre vilkår for psykisk sårbare og deres pårørende.
+      </p>
+      <p class="text-base text-gray-700 italic mt-4">
+        Tak for din støtte – sammen kan vi skabe forandring.
+      </p>
     </div>
-  </section>
+  </div>
+</section>
 
-  
       <!-- Nederste streger -->
-    <div class="w-full mt-16">
+    <div class="w-full">
        <div class="h-2.5 bg-[#FEEEBD]"></div>
        <div class="h-1.5 bg-[#F8C1C8]"></div>
       <div class="h-1.5 bg-[#C2E5F2]"></div>
@@ -56,14 +56,22 @@ Du kan også give et bidrag ved at udfylde [formularen]. Dit bidrag går direkt
   body {
     font-family: 'Times New Roman', serif;
   }
-
-  
 </style>
 
-<script>
-	    /* Parallax med tekstboks */ 
-    scroll(animate(".parallaxelement", { y: [50, 500] }),
-	 {   target: document.querySelector(".parallaxelement"),});
+<script is:inline>
+  window.addEventListener("scroll", () => {
+    const el = document.querySelector(".parallaxelement");
+    if (!el) return;
 
+    const scrollY = window.scrollY;
+    const start = 0;
+    const end = 1000;
+    const minY = 0;
+    const maxY = -400; // scroller opad, derfor negativ
+
+    const progress = Math.min(Math.max(scrollY / end, 0), 1);
+    const translateY = minY + (maxY - minY) * progress;
+
+    el.style.transform = `translateY(${translateY}px)`;
+  });
 </script>
-
