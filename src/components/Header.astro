@@ -1,16 +1,16 @@
 ---
-const logoUrl = "/logo.png"; // Indsæt vores hest/logo
+import logo from "../assets/images/logo.png"; 
 ---
 
-<header class="flex flex-col justify-between items-center bg-[#FEEEBD] p-10">
+<header class="flex flex-col justify-between items-center bg-[#FEEEBD] p-1">
   <!-- Logo til venstre -->
-  <div class="flex justify-between w-full">
+  <div class="flex justify-between w-full pl-10">
     <a href="/" class="flex items-center">
-      <img src={logoUrl} alt="Logo" class="h-10">
+      <img src={logo.src} alt="Logo" class="h-20">
     </a>
     
     <!-- Navigationsknapper til højre -->
-    <div class="flex space-x-10 font-serif italic pt-3">
+    <div class="flex space-x-10 font-serif italic pt-8 pr-10">
         <a href="/about" class="hover:underline transition">
           OM OS
         </a>
