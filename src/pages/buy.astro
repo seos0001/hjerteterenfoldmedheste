@@ -3,6 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import { Image } from "astro:assets";
 import bog from "../assets/images/bog.webp";
 import hest from "../assets/images/hest.png"; 
+import Footer from "../components/Footer.astro";
 ---
 
 <MainLayout>
@@ -59,6 +60,9 @@ import hest from "../assets/images/hest.png";
       <div class="h-1.5 bg-[#C2E5F2]"></div>
     </div>
 </MainLayout>
+<footer>
+  <Footer></Footer>
+</footer>
 
 <style>
   @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');

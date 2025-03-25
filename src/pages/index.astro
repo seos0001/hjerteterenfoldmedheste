@@ -1,6 +1,7 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
+import Footer from "../components/Footer.astro";
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
 import datavisualisering from "../assets/images/psykiatrien_datavisualisering.svg"; 
@@ -234,6 +235,9 @@ import thumbsup from "../assets/images/thumbsup.png";
       <div class="h-1.5 bg-[#C2E5F2]"></div>
     </div>
 </MainLayout>
+<footer>
+  <Footer></Footer>
+</footer>
 
 <script is:inline>
   const observer = new IntersectionObserver((entries) => {
