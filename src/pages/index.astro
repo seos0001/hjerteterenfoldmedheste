@@ -3,10 +3,300 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from '../components/Button.astro';
 import Link from '../components/Link.astro';
 import { Image } from 'astro:assets';
+import datavisualisering from "../assets/images/psykiatrien_datavisualisering.svg"; 
+import leftOutline from "../assets/images/outline_menneske.svg";
+import rightOutline from "../assets/images/outline_menneske2.svg";
+import hest from "../assets/images/hest.png"; 
 import thumbsup from "../assets/images/thumbsup.png";
 ---
-<MainLayout title="Titel">
-	<article>
-		
-	</article>
+
+<MainLayout>
+  <!-- HERO SECTION -->
+  <section class="relative w-full bg-[#C2E5F2] text-center pt-16 pb-4 px-4 font-serif">
+
+    <!-- Farvede streger i toppen -->
+    <div class="absolute top-0 left-0 w-full">
+      <div class="h-1 bg-[#FEEEBD]"></div>   <!-- Gul -->
+      <div class="h-2 bg-[#C2E5F2]"></div>   <!-- Blå -->
+	  <div class="h-2 bg-[#F8C1C8]"></div>   <!-- Lyserød -->
+    </div>
+
+<h1 class="font-youngblood text-[6rem] md:text-[7rem] leading-[1.05] mb-10 mt-1 px-2 md:px-10 tracking-tight text-black text-center space-y-0">
+  <!-- Linje 1 -->
+  <div>
+    <span class="inline-block animate-letter" style="animation-delay: 0ms">H</span>
+    <span class="inline-block animate-letter" style="animation-delay: 80ms">J</span>
+    <span class="inline-block animate-letter" style="animation-delay: 160ms">E</span>
+    <span class="inline-block animate-letter" style="animation-delay: 240ms">R</span>
+    <span class="inline-block animate-letter" style="animation-delay: 320ms">T</span>
+    <span class="inline-block animate-letter" style="animation-delay: 400ms">E</span>
+    <span class="inline-block animate-letter" style="animation-delay: 480ms">T</span>
+  </div>
+
+  <!-- Linje 2 -->
+  <div>
+    <span class="inline-block animate-letter" style="animation-delay: 600ms">E</span>
+    <span class="inline-block animate-letter" style="animation-delay: 680ms">R</span>
+    <span class="inline-block animate-letter" style="animation-delay: 760ms">&nbsp;</span>
+    <span class="inline-block animate-letter" style="animation-delay: 840ms">E</span>
+    <span class="inline-block animate-letter" style="animation-delay: 920ms">N</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1000ms">&nbsp;</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1080ms">F</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1160ms">O</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1240ms">L</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1320ms">D</span>
+  </div>
+
+  <!-- Linje 3 -->
+  <div>
+    <span class="inline-block animate-letter" style="animation-delay: 1440ms">M</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1520ms">E</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1600ms">D</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1680ms">&nbsp;</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1760ms">H</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1840ms">E</span>
+    <span class="inline-block animate-letter" style="animation-delay: 1920ms">S</span>
+    <span class="inline-block animate-letter" style="animation-delay: 2000ms">T</span>
+    <span class="inline-block animate-letter" style="animation-delay: 2080ms">E</span>
+  </div>
+</h1> 
+
+
+    <!-- Undertekst -->
+    <p class="text-lg italic mb-1">Psykiatrien – En verden med sårbarhed og systemsvigt</p>
+    <p class="text-lg mb-8">STØT EN MERE MENNESKELIG PSYKIATRI</p>
+
+    <!-- Knap -->
+    <a
+      href="/donate"
+      class="inline-block bg-[#FEEEBD] text-black px-10 py-2 rounded-full hover:bg-black hover:text-white transition mb-5"
+    >
+      BIDRAG
+    </a>
+</section>
+  <!-- STREGER EFTER HERO -->
+<div class="w-full">
+  <div class="h-3 bg-[#FEEEBD]"></div>   <!-- Gul -->
+  <div class="h-1.5 bg-[#F8C1C8]"></div>     <!-- Lyserød -->
+  <div class="h-1.5 bg-[#C2E5F2]"></div>     <!-- Blå -->
+</div>
+
+<section class="bg-[#F8C1C8] text-black py-20 px-6 font-serif">
+  <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl mb-10">
+      TVANG SOM SYMPTOM PÅ ET SVIGTET SYSTEM
+    </h2>
+  <h3 class="italic text-lg md:text-lg max-w-3xl mx-auto mb-15 leading-[1.5]">
+  Når ressourcerne slipper op, tager tvangen over.<br />
+  Ikke som hjælp – men som konsekvens af et system,<br />
+  der ikke kan rumme dem, der har allermest brug for det.
+</h3>
+
+    <div class="grid md:grid-cols-2 gap-10 text-left text-sm md:text-base leading-relaxed max-w-5xl mx-auto">
+      <p>
+        Psykiatrien befinder sig i en dyb krise. I stedet for at være et sted for omsorg og heling, er det for mange blevet et sted præget af travlhed, underbemanding og kortsigtede løsninger. Personalet løber stærkt, og alt for ofte er det den akutte brandslukning, der styrer hverdagen. I det tomrum, hvor der burde være tid, tillid og tryghed, træder noget andet ind: tvang.
+        <br><br>
+        Tvang bliver ikke brugt, fordi det er ønsket – men fordi det opleves som den eneste mulighed i et system, der ikke har ressourcer nok. Resultatet er, at mennesker i dyb krise mødes med kontrol, i stedet for kontakt.
+      </p>
+      <p>
+        Tvangsmedicinering, bæltefiksering og fastholdelse er indgreb, der sætter dybe spor – både fysisk og psykisk. For dem, der oplever det, føles det sjældent som behandling. Det føles som et overgreb. Og når kroppen holdes fast, og stemmen ikke bliver hørt, forstærkes følelsen af afmagt.
+        <br><br>
+        Selvom intentionen ofte er at beskytte, viser erfaringer og forskning, at tvang kan være traumatiserende – især når den anvendes uden reel dialog eller samtykke. Og alligevel er brugen af tvang stigende i Danmark. Det sker på trods af politiske ambitioner om det modsatte. Det er ikke bare et individuelt svigt. Det er et systemisk.
+      </p>
+    </div>
+  </div>
+</section>
+<section class="bg-[#F8C1C8] text-black py-20 px-6 font-serif">
+    <div class="max-w-6xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl mb-20">
+      Tvang i psykiatrien: Udvikling 2014-2020
+    </h2>
+	</div>
+	<div class="flex justify-center mb-6 fade-up-on-scroll">
+  <img src={datavisualisering.src} alt="datavisualisering" class="w-190 h-auto" />
+</div>
+  <h3 class="italic text-lg md:text-lg max-w-3l mx-auto mb-15 mt-30 leading-[1.5] text-center">
+  <strong>Konklusion:</strong> Når målsætninger møder virkeligheden<br />
+  Trods gentagne løfter om at reducere tvang, viser udviklingen et andet billede.<br /> Psykiatrien er overbelastet, og patienter oplever stadig tvangsindgreb som en fast del af behandlingen.<br />
+  Spørgsmålet er, om systemet vil gentage sine fejl – eller om der kommer reel forandring.
+</h3>
+ </section>
+ <div class="w-full">
+  <div class="h-3 bg-[#FEEEBD]"></div>   <!-- Gul -->
+  <div class="h-1.5 bg-[#F8C1C8]"></div>     <!-- Lyserød -->
+  <div class="h-1.5 bg-[#C2E5F2]"></div>     <!-- Blå -->
+</div>
+<section class="relative bg-[#F8C1C8] text-black py-16 px-4 font-serif overflow-hidden mb-30">
+  <!-- SVG baggrunde -->
+<div class="absolute left-0 top-140 z-0">
+  <img
+    src={leftOutline.src}
+    alt="Menneske venstre"
+    class="w-[100px] md:w-[195px] slide-in-left-on-scroll"
+  />
+</div>
+
+<div class="absolute right-0 top-20 z-0">
+  <img
+    src={rightOutline.src}
+    alt="Menneske højre"
+    class="w-[100px] md:w-[195px] slide-in-right-on-scroll"
+  />
+</div>
+
+  <!-- Indhold -->
+  <div class="relative z-10 max-w-2xl mx-auto text-center space-y-8">
+	 <h3 class="italic text-lg md:text-lg max-w-3xl mx-auto mb-8 leading-[1.5] mt-15">
+      Kære læser: Her deler vi uddrag fra <em>Hjertet er en fold med heste</em><br/>
+      en samling beretninger fra mennesker, der har oplevet psykiatrien indefra, enten som patienter eller pårørende.
+      
+     </h3>
+
+    <p class="text-sm mb-30">
+      Anna og Sidsel har sammen udarbejdet en samling, der ser dagens lys lige om lidt.<br/>Det er en bog med titlen "Hjertet er en fold med heste". Et kollektivt flerstemmigt værk.<br/>Fordi vi tror på det kollektive er nødvendigt, hvis vi sammen skal skabe et nyt sprog for psykisk sygdom.
+    </p>
+
+    <!-- Citat 1 -->
+    <div class="text-center space-y-2">
+      <p class="text-sm">
+        "En tilstand, der er umulig at beskrive.<br/>Den er glat og gennemsigtig.<br/>Som en perlehalskæde, som en snor af hvide roser..."
+      </p>
+      <p class="font-bold text-sm mb-30">Refleksion fra et sind i kaos, anonym forfatter</p>
+    </div>
+
+    <!-- Citat 2 -->
+    <div class="text-center space-y-2">
+      <p class="text-sm">
+        “Behandling er en professionel balancegang<br/>mellem omsorg og overgreb”
+      </p>
+      <p class="font-bold text-sm mb-30">En kritisk analyse af moderne behandlingsteknikker</p>
+    </div>
+
+    <!-- Citat 3 -->
+    <div class="text-center space-y-2">
+      <p class="text-sm">
+        "Depressionen indhentede mig som et lyn,<br/>sådan føltes det dengang,<br/>som et tæppe over fugle..."
+      </p>
+      <p class="font-bold text-sm mb-30">Refleksion fra et sind i kaos, anonym forfatter</p>
+    </div>
+
+    <!-- Citat 4 -->
+    <div class="text-center space-y-2">
+      <p class="text-sm">
+        "Patienten hævder, at hun i den seneste tid<br/>har haft det psykisk godt..."
+      </p>
+      <p class="font-bold text-sm mb-30">Psykologisk vurdering fra behandlingssession</p>
+    </div>
+
+    <!-- Footer note -->
+    <p class="text-sm italic">
+      <em>Hjertet er en fold med heste:</em> FORLAGET AMULET, ANNA RIEDER og SIDSEL ANA WELDEN.<br />
+      BIDRAG FRA: Birgit Bundesen, Gry Stokkendahl Dalgas og Fine Gråbøl.
+    </p>
+
+    <p class="text-sm italic text-center">
+      “Krigersk om ... Ekstremt rig og klog og bevægende”<br />
+      WEEKENDAVISEN
+    </p>
+
+    <p class="text-sm">
+      Læs mere om bogen <a href="/buy" class="underline font-bold">her</a>.
+    </p>
+  </div>
+</section>
+  <div class="w-full mt-16 mb-16">
+       <div class="h-2.5 bg-[#FEEEBD]"></div>
+       <div class="h-1.5 bg-[#F8C1C8]"></div>
+      <div class="h-1.5 bg-[#C2E5F2]"></div>
+    </div>
+  <section class="relative w-full h-[500px] overflow-hidden bg-[#F8C1C8]">
+    <div class="absolute top-0 left-0 w-full h-full">
+      <img src={hest.src} alt="Hest 1" class="absolute w-[600px] h-auto horse" />
+      <img src={hest.src} alt="Hest 2" class="absolute w-[600px] h-auto horse delay-2000" />
+    </div>
+  </section>
+      <!-- Nederste streger -->
+    <div class="w-full mt-16">
+       <div class="h-2.5 bg-[#FEEEBD]"></div>
+       <div class="h-1.5 bg-[#F8C1C8]"></div>
+      <div class="h-1.5 bg-[#C2E5F2]"></div>
+    </div>
 </MainLayout>
+
+<script is:inline>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+
+        // Fade in up
+        if (el.classList.contains('fade-up-on-scroll')) {
+          el.classList.add('animate-fade-in-up');
+        }
+
+        // Slide in from left
+        if (el.classList.contains('slide-in-left-on-scroll')) {
+          el.classList.add('animate-slide-in-left');
+        }
+
+        // Slide in from right
+        if (el.classList.contains('slide-in-right-on-scroll')) {
+          el.classList.add('animate-slide-in-right');
+        }
+
+        // Hvis du vil køre det igen hver gang det bliver synligt, så kommenter denne linje ud:
+        //observer.unobserve(el);
+      }
+    });
+  });
+
+  // Saml alle de relevante selectors her:
+  document
+    .querySelectorAll('.fade-up-on-scroll, .slide-in-left-on-scroll, .slide-in-right-on-scroll')
+    .forEach((el) => {
+      observer.observe(el);
+    });
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Times+New+Roman&display=swap');
+
+  body {
+    font-family: 'Times New Roman', serif;
+  }
+
+  @keyframes horse-run-and-bounce {
+    0% {
+      transform: translateX(100vw) rotate(0deg);
+    }
+    20% {
+      transform: translateX(75vw) rotate(3deg);
+    }
+    40% {
+      transform: translateX(50vw) rotate(-3deg);
+    }
+    60% {
+      transform: translateX(25vw) rotate(3deg);
+    }
+    80% {
+      transform: translateX(0vw) rotate(-3deg);
+    }
+    100% {
+      transform: translateX(-600px) rotate(0deg);
+    }
+  }
+
+  .horse {
+    position: absolute;
+    bottom: 50px;
+    animation: horse-run-and-bounce 6s linear infinite;
+  }
+
+  .delay-2000 {
+    left: 200px;
+    animation-delay: 2s;
+  }
+</style>
+
+
+
