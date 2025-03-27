@@ -1,27 +1,55 @@
 ---
-import logo from "../assets/images/logo.png"; 
+import logo from "../assets/images/logo.png";
 ---
 
-<header class="flex flex-col justify-between items-center bg-[#FEEEBD] p-1">
-  <!-- Logo til venstre -->
-  <div class="flex justify-between w-full pl-10">
-    <a href="/" class="flex items-center">
-      <img src={logo.src} alt="Logo" class="h-20">
+<header class="bg-[#FEEEBD] p-4 relative font-serif italic">
+  <!-- Top bar -->
+  <div class="flex justify-between items-center">
+    <!-- Logo -->
+    <a href="/" class="flex items-center pl-2">
+      <img src={logo.src} alt="Logo" class="h-16" />
     </a>
-    
-    <!-- Navigationsknapper til højre -->
-    <div class="flex space-x-10 font-serif italic pt-8 pr-10">
-        <a href="/about" class="hover:underline transition">
-          OM OS
-        </a>
-         <a href="/buy" class="hover:underline transition">
-          KØB
-        </a>
-        <a href="/donate" class="hover:underline transition">
-          STØT
-        </a>
-    </div>
+<!-- Burger menu ikon -->
+<button id="menu-toggle" class="flex flex-col justify-center items-end space-y-[4px] w-10 h-10 p-1 lg:hidden">
+  <span class="w-6 h-[2px] bg-black block"></span>
+  <span class="w-6 h-[2px] bg-black block"></span>
+  <span class="w-6 h-[2px] bg-black block"></span>
+</button>
+
+    <!-- Desktop menu -->
+    <nav class="hidden lg:flex space-x-10 pr-6 pt-4">
+      <a href="/about" class="hover:underline transition">OM OS</a>
+      <a href="/buy" class="hover:underline transition">KØB</a>
+      <a href="/donate" class="hover:underline transition">STØT</a>
+    </nav>
   </div>
+
+  <!-- Mobilmenu -->
+  <nav
+    id="mobile-menu"
+    class="hidden absolute top-0 right-0 w-1/3 h-auto max-h-[80vh] bg-[#FEEEBD] flex-col p-8 shadow-lg lg:hidden overflow-y-auto z-30"
+  >
+    <div class="flex justify-end">
+      <button id="close-menu" class="text-3xl">&times;</button>
+    </div>
+    <div class="flex flex-col space-y-4 mt-4 text-right">
+      <a href="/about" class="block hover:underline border-b py-2">OM OS</a>
+      <a href="/buy" class="block hover:underline border-b py-2">KØB</a>
+      <a href="/donate" class="block hover:underline border-b py-2">STØT</a>
+    </div>
+  </nav>
 </header>
+
+<script is:inline>
+  document.getElementById("menu-toggle").addEventListener("click", () => {
+    const menu = document.getElementById("mobile-menu");
+    menu.classList.toggle("hidden");
+  });
+
+  document.getElementById("close-menu").addEventListener("click", () => {
+    document.getElementById("mobile-menu").classList.add("hidden");
+  });
+</script>
+
 
 
