@@ -116,6 +116,6 @@
 
   .animate-fade-in {
     opacity: 0;
-    animation: fadeIn 8s ease-out forwards;
+    animation: fadeIn 6s ease-out forwards;
   }
 }
